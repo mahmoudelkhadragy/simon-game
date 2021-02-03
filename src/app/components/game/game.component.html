@@ -1,4 +1,41 @@
-<app-game-button color="red"></app-game-button>
-<app-game-button color="blue"></app-game-button>
-<app-game-button color="green"></app-game-button>
-<app-game-button color="yellow"></app-game-button>
+<div class="container">
+  <div class="flex center">
+    <app-game-button
+      [active]="colors.red"
+      (guess)="playerColorGuess($event)"
+      color="red"
+    ></app-game-button>
+  </div>
+  <div class="flex middle">
+    <app-game-button
+      [active]="colors.blue"
+      (guess)="playerColorGuess($event)"
+      color="blue"
+    ></app-game-button>
+    <p class="counter">{{ count }}</p>
+    <app-game-button
+      [active]="colors.green"
+      (guess)="playerColorGuess($event)"
+      color="green"
+    ></app-game-button>
+  </div>
+  <div class="flex center">
+    <app-game-button
+      [active]="colors.yellow"
+      (guess)="playerColorGuess($event)"
+      color="yellow"
+    ></app-game-button>
+  </div>
+  <!-- <div class="flex center">
+    <button
+      *ngIf="!gameStarted"
+      (click)="startGame()"
+      class="game_btn start_game"
+    >
+      Start Game
+    </button>
+    <button *ngIf="gameStarted" (click)="endGame()" class="game_btn end_game">
+      End Game
+    </button>
+  </div> -->
+</div>

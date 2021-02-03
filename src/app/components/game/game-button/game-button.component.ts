@@ -1,19 +1,19 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-game-button',
   templateUrl: './game-button.component.html',
-  styleUrls: ['./game-button.component.scss']
+  styleUrls: ['./game-button.component.scss'],
 })
 export class GameButtonComponent implements OnInit {
   @Input() color = '';
-  constructor() { }
+  @Input() active = false;
+  @Output() guess: EventEmitter<string> = new EventEmitter<string>();
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  onClick(): void {
+    this.guess.emit(this.color);
   }
-
-  onClick(): void{
-    console.log(`${this.color} clicked`);
-  }
-
 }

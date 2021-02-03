@@ -1,1 +1,5 @@
-<button (click)="onClick()">{{color}}</button>
+<button
+  [class.active]="active"
+  class="{{ color }}"
+  (click)="onClick()"
+></button>

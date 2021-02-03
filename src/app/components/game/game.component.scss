@@ -1,0 +1,67 @@
+.container {
+  width: 480px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  margin: 2rem;
+}
+
+.center {
+  justify-content: center;
+  align-items: baseline;
+}
+.middle {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.counter {
+  font-size: 2rem;
+}
+
+.game_btn {
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 20px;
+  background-color: var(--black);
+  border-radius: 4rem;
+  transition: all 0.3s ease-in-out;
+}
+.start_game {
+  font-size: 1.2rem;
+  color: #fff;
+  border: 0.2rem solid #fff;
+  padding: 0.65rem 3rem;
+  &:hover {
+    box-shadow: -4px 0px 6px 0px #fff, 2px 0px 6px 2px #fff;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: -4px 0px 6px 0px #09c, 2px 0px 6px 2px #09c;
+    border: 0.2rem solid #09c;
+  }
+}
+.end_game {
+  font-size: 1rem;
+  color: #a9a6a6;
+  padding: 0.6rem 2.8rem;
+  background-color: var(--black);
+  border: 0.2rem solid #a9a6a6;
+  border-radius: 4rem;
+  &:hover {
+    box-shadow: -4px 0px 6px 0px #a9a6a6, 2px 0px 6px 2px #a9a6a6;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: -4px 0px 6px 0px #09c, 2px 0px 6px 2px #09c;
+    border: 0.2rem solid #09c;
+  }
+}
+
+@media (max-width: 551px) {
+  .container {
+    width: 80%;
+  }
+}
